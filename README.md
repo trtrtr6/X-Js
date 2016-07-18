@@ -3,9 +3,7 @@
 
 //闭包执行一个立即定义的匿名函数  
 !function(factory) {  
-  
     //factory是一个函数，下面的koExports就是他的参数  
-  
     // Support three module loading scenarios  
     if (typeof require === 'function' && typeof exports === 'object' && typeof module === 'object') {  
         // [1] CommonJS/Node.js  
@@ -24,10 +22,8 @@
         factory(window['ko'] = {});  
     }  
 }(function(koExports){  
-  
     //ko的全局定义 koExports是undefined 对应着上面的[3] 这种情况  
-    var ko = typeof koExports !== 'undefined' ? koExports : {};  
-  
+    var ko = typeof koExports !== 'undefined' ? koExports : {};
     //定义一个ko的方法  
     ko.abc = function(s){  
         alert(s);  
