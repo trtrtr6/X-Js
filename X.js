@@ -6,7 +6,7 @@
   } else if (typeof define === 'function' && define['amd']) {
       define(['exports'], factory);
   } else {
-    factory(window['X'] = {
+    factory(window.X = {
       Version:'0.0.1',
       IE : !!(window.attachEvent && !window.opera), //判断ie
       Webkit :  navigator.userAgent.toLowerCase().indexOf(' applewebkit/') > -1,  //判断webkit内核
@@ -187,8 +187,8 @@
       return this.obj[0].innerText;
     }
   }
-  
-  window['$X'] = function(selectName){return new $_fn(selectName)};
+
+  window.$X = function(selectName){return new $_fn(selectName)};
 });
 
 
