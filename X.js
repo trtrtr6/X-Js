@@ -32,8 +32,58 @@
                   }
               },
               //截取指定字符之间的字符串/截取指定字符串字符下标之间的字符串(当只指定一个下标/字符的时候可指所要截取的字符串长度)
-              subString : function(begin,end,length){
+              subString : function(str,begin,end,length){
+                  if(typeof str == 'string'){
+                      //变量初始化
+                      var b = 0;
+                      var e = 0;
+                      var n = 0;
+                      if(typeof begin == 'string'){
+                          begin = str.indexOf(b)==-1 ? 0 : str.indexOf(begin);
+                      }
+                      if(typeof end == 'string'){
+                          end = str.indexOf(e)==-1 ? 0 : str.indexOf(end);
+                      }
 
+                      if(typeof length == 'number' && length > 0){
+                          n = length;
+                      }else{
+                          n = str.length;
+                      }
+
+                      if(typeof begin == 'number' && begin > 0){
+                          b = Math.floor(begin);
+                      }else{
+                          b = -1;
+                      }
+
+                      if(typeof end == 'number' && end > 0){
+                          e = Math.floor(end);
+                      }else{
+                          e = -1;
+                      }
+
+                      //函数功能编写
+                      if(b >= 0){
+                          if(e >= 0 && b >= e){
+                              return str.substring(e,b);
+                          }else if(e < 0 && n > 0){
+                              return str.substr(b,n);
+                          }else{
+                              return str;
+                          }
+                      }else{
+                          if(e >= 0 && n > 0){
+                              if(e-n >= 0){
+                                  return str.substr(e-n,n);
+                              }else{
+                                  return str.substr(0,n);
+                              }
+                          }else{
+                              return str;
+                          }
+                      }
+                  }
               }
           },
           DateUtils:{
@@ -254,6 +304,3 @@
         alert(s);
     }
 });
-
-//[3]中情况的调用
-ko.abc("msg");  */
