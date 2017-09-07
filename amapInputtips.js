@@ -59,7 +59,7 @@
           }
           return;
         }else if(keyCode==38 && isShow){//向上
-          self.index--
+          self.index--;
           if(self.index==-1){
             self.index=(tipsCount-1);
           }
@@ -172,7 +172,7 @@
       var callback = options.onSearchComplete;
       var keyword = options.keyword;
       var city = options.city;
-      if(!(key&&key.length>0)||!(city&&city.length>0)){
+      if(!(key&&key.length>0)||!(keyword&&keyword.length>0)){
         return;
       }
       $.ajax({
