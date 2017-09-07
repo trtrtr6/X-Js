@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+.inputtips-main{
+	display:none;
+	position:absolute;
+}
+.inputtips-main ul{
+	border:1px solid #e4e6e7;
+	background:#fff;
+	cursor:default;
+	padding:0px;
+	margin:0px;
+	font-size:12px;
+}
+.inputtips-main ul>li.inputtips-main-tip{
+	list-style:none;
+	line-height:32px;
+	font-style:normal;
+	padding:0 10px;
+	text-decoration:none;
+	color:#666;
+	cursor:pointer;
+}
