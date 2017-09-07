@@ -11,6 +11,7 @@
     this.options = options = $.extend(defaults, options || {});
     this.$inputtipsdiv=null;
     this.index=-1;
+    this.keyCodeArr=['9','12','16','17','18','20','33','34','35','36','37','39','45','144'];
     this.init();
   }
   Inputtips.prototype={
@@ -52,11 +53,11 @@
         var keyCode = e.keyCode;
         var isShow = "block"==self.$inputtipsdiv.css("display")?true:false;
         var tipsCount = self.$inputtipsdiv.find("ul>li").length;
-        if(keyCode == 13){
-          if(isShow){
+        if(keyCode==13 || keyCode==108){
+          if(isShow&&self.index!=-1){
             self.selectTip(self.$inputtipsdiv.find("ul>li").eq(self.index));
-            self.$ele.blur();
           }
+          self.$ele.blur();
           return;
         }else if(keyCode==38 && isShow){//向上
           self.index--;
@@ -72,7 +73,7 @@
           }
           self.selectTip(self.$inputtipsdiv.find("ul>li").eq(self.index));
           return;
-        }else if(keyCode == 9){
+        }else if(self.isInKeyCode(keyCode)||(keyCode>=112 && keyCode<=123)){
           return;
         }
         var keyword = $(this).val();
@@ -159,6 +160,15 @@
     },
     isNotEmpty : function(value) {
       return value != null && value != "" && value != undefined && value != "undefined"
+    },
+    isInKeyCode : function(keyCode){
+      var keyCodeArr = this.keyCodeArr;
+      for(var i in keyCodeArr){
+        if(keyCode == keyCodeArr[i]){
+          return true;
+        }
+      }
+      return false;
     }
   }
   $.fn.inputtips = function (options) {
