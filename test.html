@@ -28,11 +28,19 @@
         .ui.menu .item.menu_:before{
             width:0px;
         }
+        .main-left{
+            box-shadow: 0 1px 2px 0 rgba(34,36,38,.15), 0 0 0 1px rgba(34,36,38,.15);
+        }
+        .index{
+            border:none;padding:1em 1em;background-color: #f7f7f7;
+        }
     </style>
 </head>
 <body>
-<div class="ui styled accordion" style="width:14rem">
-    <div class="title" style="border:none;"><i class="remove from calendar icon"></i>菜单一<i class="angle right icon fn_right"></i></div>
+<div class="main-left" style="width:14rem">
+    <div class="index"><i class="remove from calendar icon"></i>首页</div>
+<div class="ui styled accordion" style="border-radius:0px;box-shadow:none;">
+    <div class="title" style="border:none;padding:1em 1em;"><i class="remove from calendar icon"></i>菜单一<i class="angle right icon fn_right"></i></div>
     <div class="content" style="padding:0">
         <div class="ui fluid vertical menu" style="box-shadow:none;border:0px;">
             <a class="item menu_">跑步</a>
@@ -40,7 +48,24 @@
             <a class="item menu_">自行车</a>
         </div>
     </div>
-    <div class="title" style="border:none;"><i class="users icon"></i>菜单二<i class="angle right icon fn_right"></i></div>
+    <div class="title" style="border:none;padding:1em 1em;"><i class="users icon"></i>菜单二<i class="angle right icon fn_right"></i></div>
+    <div class="content" style="padding:0">
+        <div class="ui fluid vertical menu" style="box-shadow:none;border:0px;">
+            <a class="item menu_">跑步</a>
+            <a class="item menu_">走路</a>
+            <a class="item menu_">自行车</a>
+            <a class="item menu_">跑步</a>
+            <a class="item menu_">走路</a>
+            <a class="item menu_">自行车</a>
+            <a class="item menu_">跑步</a>
+            <a class="item menu_">走路</a>
+            <a class="item menu_">自行车</a>
+            <a class="item menu_">跑步</a>
+            <a class="item menu_">走路</a>
+            <a class="item menu_">自行车</a>
+        </div>
+    </div>
+    <div class="title" style="border:none;padding:1em 1em;"><i class="configure icon"></i>菜单三<i class="angle right icon fn_right"></i></div>
     <div class="content" style="padding:0">
         <div class="ui fluid vertical menu" style="box-shadow:none;border:0px;">
             <a class="item menu_">跑步</a>
@@ -48,7 +73,7 @@
             <a class="item menu_">自行车</a>
         </div>
     </div>
-    <div class="title" style="border:none;"><i class="configure icon"></i>菜单三<i class="angle right icon fn_right"></i></div>
+    <div class="title" style="border:none;padding:1em 1em;"><i class="configure icon"></i>菜单四<i class="angle right icon fn_right"></i></div>
     <div class="content" style="padding:0">
         <div class="ui fluid vertical menu" style="box-shadow:none;border:0px;">
             <a class="item menu_">跑步</a>
@@ -56,6 +81,15 @@
             <a class="item menu_">自行车</a>
         </div>
     </div>
+    <div class="title" style="border:none;padding:1em 1em;"><i class="configure icon"></i>菜单五<i class="angle right icon fn_right"></i></div>
+    <div class="content" style="padding:0">
+        <div class="ui fluid vertical menu" style="box-shadow:none;border:0px;">
+            <a class="item menu_">跑步</a>
+            <a class="item menu_">走路</a>
+            <a class="item menu_">自行车</a>
+        </div>
+    </div>
+</div>
 </div>
 </body>
 <script type="text/javascript" src="/public/js/jquery-3.1.1.min.js"></script>
